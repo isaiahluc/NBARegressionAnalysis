@@ -46,17 +46,23 @@ Checked against 2024-25 results:
 
 
 # Answers to the research questions
-Age: No. Older rosters won more, the opposite of our hypothesis. Experience appears to outweigh physical decline at the team level within the observed range (ages 22 to 31).
-Offensive vs. defensive rating: The model can't separate them. MOV is essentially offensive rating minus defensive rating scaled by pace, which is why all three had VIFs above 1,000. Once MOV is in the model, the ratings add nothing new.
-New head coach: No significant effect in this sample.
+1. Age: No. Older rosters won more, the opposite of our hypothesis. Experience appears to outweigh physical decline at the team level within the observed range (ages 22 to 31).
+   
+2. Offensive vs. defensive rating: The model can't separate them. MOV is essentially offensive rating minus defensive rating scaled by pace, which is why all three had VIFs above 1,000. Once MOV is in the model, the ratings add nothing new.
+   
+3. New head coach: No significant effect in this sample.
 # Limitations
 MOV is close to a restatement of winning (r = 0.97 with WRate). The high R² mostly reflects that teams that outscore opponents win games. That makes the model accurate but not very useful as a forecast, since MOV isn't known until the season is played. The 2024-25 check used same-season MOV, so it tests fit, not true prediction.
+
 Small sample. 60 observations from two seasons limits power, especially for the categorical variables.
+
 Influential points were kept. Refitting without observations 10, 47, and 57 would show how sensitive the Age coefficient is.
+
 The validation teams were all strong ones, not a random draw.
 
 A natural next step is to predict win percentage from prior-season MOV, age, and roster changes, which would make it a real forecasting model.
-Reproducing
+
+# Reproducing
 data <- read.csv("Workable Stat 3220 Project Data.csv", header = TRUE)
 
 data <- data[-c(61, 62), ]   # drop summary rows
