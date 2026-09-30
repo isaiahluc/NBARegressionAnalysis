@@ -34,40 +34,16 @@ Final model (n = 60, adjusted R² = 0.947):
 
 WRate = 0.312 + 0.0297 * MOV + 0.0071 * Age
 
-Term
-Estimate
-95% CI
-p-value
-MOV
-0.0297
-[0.0276, 0.0318]
-< 0.001
-Age
-0.0071
-[0.0022, 0.0120]
-0.005
+<img width="1098" height="200" alt="image" src="https://github.com/user-attachments/assets/d4bdf613-96a2-42c0-b8f3-b22250f477cb" />
+
 
 
 Holding the other variable constant, each extra point of average margin adds about 3 percentage points of win percentage, and each extra year of average roster age adds about 0.7 points.
 
 Checked against 2024-25 results:
 
-Team
-Predicted
-Actual
-Error (pts)
-Oklahoma City
-.871
-.829
-4.2
-Cleveland
-.785
-.780
-0.5
-Denver
-.620
-.610
-1.0
+<img width="1096" height="256" alt="image" src="https://github.com/user-attachments/assets/d75a266b-4fee-42dc-9cf6-1474623e43ab" />
+
 
 # Answers to the research questions
 Age: No. Older rosters won more, the opposite of our hypothesis. Experience appears to outweigh physical decline at the team level within the observed range (ages 22 to 31).
