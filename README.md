@@ -11,6 +11,9 @@ Does starting a season with a new head coach lower win percentage?
 # Data
 60 team-seasons (all 30 teams in 2015-16 and 2022-23). The two seasons are seven years apart, so rosters, coaches, and front offices had turned over enough to treat each team-season as a separate observation.
 
+
+<img width="1092" height="532" alt="image" src="https://github.com/user-attachments/assets/a688805b-b222-44b9-be4a-c227c1cd7cdd" />
+
 Variable
 Description
 WRate (response)
