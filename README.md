@@ -2,11 +2,11 @@
 
 # What predicts NBA win percentage?
 A multiple linear regression study of team win percentage across two NBA seasons (2015-16 and 2022-23), built in R. Group project for STAT 3220 at the University of Virginia.
-Research questions
+# Research questions
 Do teams with an older average roster win less?
 Do offensive and defensive rating drive win percentage, and which matters more?
 Does starting a season with a new head coach lower win percentage?
-Data
+# Data
 60 team-seasons (all 30 teams in 2015-16 and 2022-23). The two seasons are seven years apart, so rosters, coaches, and front offices had turned over enough to treat each team-season as a separate observation.
 
 Variable
