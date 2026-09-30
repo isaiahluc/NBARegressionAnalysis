@@ -61,18 +61,3 @@ Influential points were kept. Refitting without observations 10, 47, and 57 woul
 The validation teams were all strong ones, not a random draw.
 
 A natural next step is to predict win percentage from prior-season MOV, age, and roster changes, which would make it a real forecasting model.
-
-# Reproducing
-data <- read.csv("Workable Stat 3220 Project Data.csv", header = TRUE)
-
-data <- data[-c(61, 62), ]   # drop summary rows
-
-data <- data[, -c(15:31)]    # drop unused columns
-
-model <- lm(WRate ~ MOV + Age, data = data)
-
-summary(model)
-
-confint(model)
-
-Required packages: car (VIFs), olsrr (stepwise selection, diagnostics), glmnet (ridge), corrplot, ggplot2.
