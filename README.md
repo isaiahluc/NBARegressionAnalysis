@@ -14,25 +14,11 @@ Does starting a season with a new head coach lower win percentage?
 
 <img width="1092" height="532" alt="image" src="https://github.com/user-attachments/assets/a688805b-b222-44b9-be4a-c227c1cd7cdd" />
 
-Variable
-Description
-WRate (response)
-Share of regular-season games won
-Age
-Average age of active players
-MOV
-Average margin of victory (points)
-ORtg / DRtg
-Points scored / allowed per 100 possessions
-Pace
-Possessions per 48 minutes
-Att, Att_G
-Total and per-game home attendance
-Conf, POYP, NewCoach
-Conference, made playoffs prior year, new head coach (yes/no)
 
 
-Sources: Basketball Reference (team stats, coaching changes, playoff teams) and TeamRankings (win percentage).
+Sources: Basketball Reference (team stats, coaching changes, playoff teams): https://www.basketball-reference.com
+
+and TeamRankings (win percentage): https://www.teamrankings.com/nba/stat/win-pct-all-games
 # Method
 Exploratory analysis. The response was roughly normal, so no transformation was needed. Coach status and conference showed little separation in win percentage.
 Multicollinearity check. Wins and losses were dropped because they define the response. The full model still had VIFs above 1,000 for MOV, ORtg, and DRtg, and above 100 for the two attendance measures.
