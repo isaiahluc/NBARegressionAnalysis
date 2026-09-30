@@ -1,4 +1,4 @@
-# NBARegressionAnalysis
+# NBA Regression Analysis
 
 # What predicts NBA win percentage?
 A multiple linear regression study of team win percentage across two NBA seasons (2015-16 and 2022-23), built in R. Group project for STAT 3220 at the University of Virginia.
@@ -28,13 +28,13 @@ Conference, made playoffs prior year, new head coach (yes/no)
 
 
 Sources: Basketball Reference (team stats, coaching changes, playoff teams) and TeamRankings (win percentage).
-Method
+# Method
 Exploratory analysis. The response was roughly normal, so no transformation was needed. Coach status and conference showed little separation in win percentage.
 Multicollinearity check. Wins and losses were dropped because they define the response. The full model still had VIFs above 1,000 for MOV, ORtg, and DRtg, and above 100 for the two attendance measures.
 Stepwise selection (entry/exit threshold p = 0.15, confirmed at 0.20) kept only MOV and Age. VIFs in the reduced model were 1.22.
 Diagnostics. Residual plots showed no curvature or fanning, and the Q-Q plot was close to normal. Cook's distance and deleted studentized residuals flagged observations 10, 47, and 57 as influential.
 Ridge regression as a comparison method (R² = 0.946 vs. 0.947 for OLS).
-Results
+# Results
 Final model (n = 60, adjusted R² = 0.947):
 
 WRate = 0.312 + 0.0297 * MOV + 0.0071 * Age
@@ -74,11 +74,11 @@ Denver
 .610
 1.0
 
-Answers to the research questions
+# Answers to the research questions
 Age: No. Older rosters won more, the opposite of our hypothesis. Experience appears to outweigh physical decline at the team level within the observed range (ages 22 to 31).
 Offensive vs. defensive rating: The model can't separate them. MOV is essentially offensive rating minus defensive rating scaled by pace, which is why all three had VIFs above 1,000. Once MOV is in the model, the ratings add nothing new.
 New head coach: No significant effect in this sample.
-Limitations
+# Limitations
 MOV is close to a restatement of winning (r = 0.97 with WRate). The high R² mostly reflects that teams that outscore opponents win games. That makes the model accurate but not very useful as a forecast, since MOV isn't known until the season is played. The 2024-25 check used same-season MOV, so it tests fit, not true prediction.
 Small sample. 60 observations from two seasons limits power, especially for the categorical variables.
 Influential points were kept. Refitting without observations 10, 47, and 57 would show how sensitive the Age coefficient is.
