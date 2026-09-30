@@ -20,11 +20,15 @@ Sources: Basketball Reference (team stats, coaching changes, playoff teams): htt
 
 and TeamRankings (win percentage): https://www.teamrankings.com/nba/stat/win-pct-all-games
 # Method
-Exploratory analysis. The response was roughly normal, so no transformation was needed. Coach status and conference showed little separation in win percentage.
-Multicollinearity check. Wins and losses were dropped because they define the response. The full model still had VIFs above 1,000 for MOV, ORtg, and DRtg, and above 100 for the two attendance measures.
-Stepwise selection (entry/exit threshold p = 0.15, confirmed at 0.20) kept only MOV and Age. VIFs in the reduced model were 1.22.
-Diagnostics. Residual plots showed no curvature or fanning, and the Q-Q plot was close to normal. Cook's distance and deleted studentized residuals flagged observations 10, 47, and 57 as influential.
-Ridge regression as a comparison method (R² = 0.946 vs. 0.947 for OLS).
+1. Exploratory analysis. The response was roughly normal, so no transformation was needed. Coach status and conference showed little separation in win percentage.
+
+2. Multicollinearity check. Wins and losses were dropped because they define the response. The full model still had VIFs above 1,000 for MOV, ORtg, and DRtg, and above 100 for the two attendance measures.
+
+3. Stepwise selection (entry/exit threshold p = 0.15, confirmed at 0.20) kept only MOV and Age. VIFs in the reduced model were 1.22.
+   
+4. Diagnostics. Residual plots showed no curvature or fanning, and the Q-Q plot was close to normal. Cook's distance and deleted studentized residuals flagged observations 10, 47, and 57 as influential.
+   
+5. Ridge regression as a comparison method (R² = 0.946 vs. 0.947 for OLS).
 # Results
 Final model (n = 60, adjusted R² = 0.947):
 
